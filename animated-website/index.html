@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova — Animated Website</title>
+  <meta name="description" content="An animated, dependency-free landing page." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="logo">nova<span>.</span></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#work">Work</a>
+      <a href="#stats">Stats</a>
+      <a href="#contact" class="btn btn-small">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <p class="eyebrow reveal">Hello, world —</p>
+      <h1 class="hero-title">
+        <span class="line"><span>We build</span></span>
+        <span class="line"><span class="gradient-text" id="typed">motion</span><span class="caret">|</span></span>
+        <span class="line"><span>for the web.</span></span>
+      </h1>
+      <p class="lead reveal">A tiny, dependency-free site packed with smooth animations: particles, scroll reveals, 3D tilt cards, counters and more.</p>
+      <div class="cta reveal">
+        <a href="#features" class="btn magnetic">Explore <span class="arrow">→</span></a>
+        <a href="#contact" class="btn btn-ghost magnetic">Say hi</a>
+      </div>
+      <a href="#features" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Design</span><span>✦</span><span>Motion</span><span>✦</span><span>Code</span><span>✦</span><span>Performance</span><span>✦</span><span>Accessibility</span><span>✦</span>
+        <span>Design</span><span>✦</span><span>Motion</span><span>✦</span><span>Code</span><span>✦</span><span>Performance</span><span>✦</span><span>Accessibility</span><span>✦</span>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2 class="section-title reveal">What's inside</h2>
+      <div class="grid">
+        <article class="card tilt reveal" style="--d:0ms">
+          <div class="icon">⚡</div>
+          <h3>Fast</h3>
+          <p>Pure HTML, CSS and vanilla JS. No frameworks, no build step, loads instantly.</p>
+        </article>
+        <article class="card tilt reveal" style="--d:120ms">
+          <div class="icon">🌀</div>
+          <h3>Fluid</h3>
+          <p>GPU-friendly transforms and requestAnimationFrame for buttery 60fps motion.</p>
+        </article>
+        <article class="card tilt reveal" style="--d:240ms">
+          <div class="icon">📱</div>
+          <h3>Responsive</h3>
+          <p>Looks great on phones, tablets and big screens alike.</p>
+        </article>
+        <article class="card tilt reveal" style="--d:360ms">
+          <div class="icon">♿</div>
+          <h3>Considerate</h3>
+          <p>Respects “reduce motion” settings so everyone gets a comfortable experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <h2 class="section-title reveal">Selected work</h2>
+      <div class="work">
+        <div class="work-item reveal" style="--c1:#ff6ec4;--c2:#7873f5"><span>01</span><h3>Aurora</h3><p>Brand &amp; motion system</p></div>
+        <div class="work-item reveal" style="--c1:#42e695;--c2:#3bb2b8;--d:120ms"><span>02</span><h3>Pulse</h3><p>Interactive dashboard</p></div>
+        <div class="work-item reveal" style="--c1:#f6d365;--c2:#fda085;--d:240ms"><span>03</span><h3>Orbit</h3><p>3D product launch</p></div>
+      </div>
+    </section>
+
+    <section id="stats" class="section stats">
+      <div class="stat reveal"><strong class="count" data-target="120">0</strong><span>Projects shipped</span></div>
+      <div class="stat reveal" style="--d:120ms"><strong class="count" data-target="98" data-suffix="%">0</strong><span>Happy clients</span></div>
+      <div class="stat reveal" style="--d:240ms"><strong class="count" data-target="60" data-suffix="fps">0</strong><span>Smooth motion</span></div>
+      <div class="stat reveal" style="--d:360ms"><strong class="count" data-target="0" data-suffix=" deps">0</strong><span>Dependencies</span></div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2 class="section-title reveal">Let's make something move.</h2>
+      <form class="form reveal" id="contact-form">
+        <label><span>Name</span><input type="text" name="name" required /></label>
+        <label><span>Email</span><input type="email" name="email" required /></label>
+        <label class="full"><span>Message</span><textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="btn magnetic full">Send message <span class="arrow">→</span></button>
+        <p class="form-note full" id="form-note" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> nova. Made with motion.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
